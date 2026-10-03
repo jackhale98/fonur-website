@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FONUR//Club site//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Alumni Weekend
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:event-2026-10-24-alumni-weekend@fonur.org
+DTSTAMP:20261003T131852Z
+SUMMARY:Alumni Weekend
+DTSTART:20261024T184500Z
+DTEND:20261024T214500Z
+LOCATION:Carter Field\, Boston\, MA
+DESCRIPTION:The alumni gathering is at the Maddogs' match against Babson at
+  Carter Field. Kickoff is at 2:45 PM.\n\nhttps://fonur.org/events/2026-10-
+ 24-alumni-weekend/
+URL:https://fonur.org/events/2026-10-24-alumni-weekend/
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
