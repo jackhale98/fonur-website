@@ -1,0 +1,78 @@
+{
+ "generated": "2026-10-10T13:04:59.952Z",
+ "trackers": [
+  {
+   "id": "campaign:tackleathon-demo",
+   "kind": "board",
+   "title": "Tackleathon demo",
+   "page": "/campaigns/tackleathon-demo/",
+   "opens": "2026-10-07T04:00:00.000Z",
+   "closes": "2027-07-01T03:59:00.000Z",
+   "entries": [
+    {
+     "key": "alex-brennan",
+     "label": "Alex Brennan",
+     "number": 1
+    },
+    {
+     "key": "sam-okafor",
+     "label": "Sam Okafor",
+     "number": 2
+    },
+    {
+     "key": "chris-doyle",
+     "label": "Chris Doyle",
+     "number": 3
+    },
+    {
+     "key": "jordan-chen",
+     "label": "Jordan Chen",
+     "number": 4
+    },
+    {
+     "key": "riley-esposito",
+     "label": "Riley Esposito",
+     "number": 6
+    },
+    {
+     "key": "morgan-fitzgerald",
+     "label": "Morgan Fitzgerald",
+     "number": 7
+    },
+    {
+     "key": "taylor-grant",
+     "label": "Taylor Grant",
+     "number": 8
+    },
+    {
+     "key": "casey-hughes",
+     "label": "Casey Hughes",
+     "number": 9
+    },
+    {
+     "key": "jamie-alvarez",
+     "label": "Jamie Alvarez",
+     "number": 10
+    },
+    {
+     "key": "drew-kowalski",
+     "label": "Drew Kowalski",
+     "number": 15
+    }
+   ],
+   "actions": [
+    {
+     "label": "+1",
+     "delta": 1
+    },
+    {
+     "label": "−1",
+     "delta": -1
+    }
+   ],
+   "allowAdd": true,
+   "statuses": [],
+   "unit": "tackles"
+  }
+ ]
+}

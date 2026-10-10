@@ -1,0 +1,1 @@
+import"./forms.DVSLOTDj.js";var e=document.getElementById(`rsvp`);e&&new Date().toLocaleDateString(`en-CA`)>(e.dataset.closes??`9999`)&&(e.querySelector(`.rsvp-open`).hidden=!0,e.querySelector(`.rsvp-closed`).hidden=!1);
