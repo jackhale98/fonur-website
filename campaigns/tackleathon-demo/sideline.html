@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141416">
+<meta name="robots" content="noindex">
+<title>Practice · FONUR sideline</title>
+<style>
+  /* High contrast for bright sunlight; big targets for one thumb */
+  :root { --red: #b3122e; --black: #141416; --ink: #16181d; --paper: #f2f2ef; --surface: #fff; --muted: #555b65; --line: #cfd1d5; --gold: #c9962b; --green: #1f7a3a; --amber: #9a6200;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--paper); }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; min-height: 100%; }
+  body { padding-bottom: calc(96px + env(safe-area-inset-bottom)); -webkit-tap-highlight-color: transparent; }
+  button { font: inherit; color: inherit; touch-action: manipulation; -webkit-user-select: none; user-select: none; cursor: pointer; }
+  .top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 10px; padding: calc(10px + env(safe-area-inset-top)) 14px 10px; background: var(--black); color: #fff; }
+  .top .what { flex: 1; min-width: 0; }
+  .top .title { font-weight: 800; font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .top .sum { font-size: 0.9rem; opacity: 0.85; }
+  .top .sum b { font-size: 1.5rem; opacity: 1; font-variant-numeric: tabular-nums; }
+  .pill { flex: none; padding: 6px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 800; background: var(--green); color: #fff; }
+  .pill.wait { background: var(--amber); }
+  .pill.off { background: var(--red); }
+  .menu { flex: none; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgb(255 255 255 / 0.3); background: transparent; color: #fff; font-size: 1.4rem; line-height: 1; }
+  .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 10px 14px 0; }
+  .tabs button { flex: none; padding: 10px 14px; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); font-weight: 700; }
+  .tabs button[aria-pressed="true"] { border-color: var(--black); background: var(--black); color: #fff; }
+  .note { margin: 12px 14px 0; padding: 12px 14px; border-radius: 10px; background: var(--surface); border-left: 5px solid var(--amber); font-weight: 600; }
+  .note.err { border-left-color: var(--red); }
+  .note.practice { font-size: 0.85rem; font-weight: 500; padding: 8px 12px; border-left-color: var(--gold); }
+  /* Board: a tile per player, in jersey order. Tap the tile to add one; the − in the corner takes one away. */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 12px 14px; }
+  .tile { position: relative; }
+  /* Number top left, count top right, surname along the bottom (the − button sits bottom right) */
+  .plus { width: 100%; min-height: 116px; display: grid; grid-template-columns: 1fr auto; grid-template-rows: 1fr auto; align-items: start; gap: 4px 8px; padding: 10px 12px 12px; text-align: left;
+    border: 2px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: 0 1px 0 rgb(0 0 0 / 0.06); }
+  .plus:active { transform: scale(0.98); }
+  .plus .num { font-size: 2.5rem; font-weight: 900; line-height: 1; }
+  .plus .count { font-size: 2.5rem; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; color: var(--red); text-align: right; }
+  .plus .name { grid-column: 1 / 3; align-self: end; font-weight: 700; font-size: 1.02rem; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 50px; }
+  .plus.hit { animation: hit 0.35s; }
+  @keyframes hit { 0% { background: #ffe9a8; border-color: var(--gold); } 100% { background: var(--surface); } }
+  .minus { position: absolute; bottom: 6px; right: 6px; width: 44px; height: 44px; border-radius: 10px; border: 2px solid var(--line); background: var(--paper); font-size: 1.5rem; font-weight: 900; line-height: 1; }
+  .add { min-height: 116px; border: 2px dashed var(--muted); border-radius: 14px; background: transparent; font-weight: 800; color: var(--muted); }
+  /* Match: two columns of scoring buttons */
+  .status { display: flex; gap: 6px; overflow-x: auto; padding: 12px 14px 0; }
+  .status button { flex: none; padding: 12px 12px; border-radius: 10px; border: 2px solid var(--line); background: var(--surface); font-weight: 700; font-size: 0.92rem; }
+  .status button[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: #fff; }
+  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px 14px; }
+  .side { display: flex; flex-direction: column; gap: 8px; }
+  .side h2 { margin: 0; font-size: 1.05rem; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .side .score { text-align: center; font-size: 4rem; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
+  .side .score.hit { animation: hit 0.35s; border-radius: 12px; }
+  .side .pts { min-height: 56px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); font-weight: 800; font-size: 1.05rem; }
+  .side .pts.minus1 { min-height: 48px; background: var(--paper); color: var(--muted); }
+  /* Recent actions with Undo, pinned to the bottom within thumb reach */
+  .recent { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: flex; gap: 8px; overflow-x: auto; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: var(--surface); border-top: 2px solid var(--line); }
+  .recent:empty::before { content: 'Your last taps show here, with Undo.'; color: var(--muted); padding: 12px 2px; }
+  .chip { flex: none; display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 12px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); font-weight: 700; font-size: 0.92rem; white-space: nowrap; }
+  .chip.undone { opacity: 0.45; text-decoration: line-through; }
+  .chip .t { color: var(--muted); font-weight: 600; font-size: 0.8rem; }
+  .chip button { min-height: 44px; padding: 0 12px; border-radius: 10px; border: 0; background: var(--black); color: #fff; font-weight: 800; }
+  dialog { width: min(92vw, 420px); border: 0; border-radius: 16px; padding: 18px; }
+  dialog::backdrop { background: rgb(0 0 0 / 0.5); }
+  dialog h2 { margin: 0 0 12px; font-size: 1.2rem; }
+  dialog label { display: block; font-weight: 700; margin: 10px 0 4px; }
+  dialog input, dialog select { width: 100%; padding: 12px; font-size: 1.1rem; border: 2px solid var(--line); border-radius: 10px; }
+  dialog .row { display: flex; gap: 10px; margin-top: 16px; }
+  dialog .row button { flex: 1; min-height: 50px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); font-weight: 800; }
+  dialog .row button.go { background: var(--black); border-color: var(--black); color: #fff; }
+  dialog .list { list-style: none; margin: 0; padding: 0; max-height: 50vh; overflow: auto; }
+  dialog .list li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+  dialog .list .who { color: var(--muted); font-size: 0.8rem; }
+  .menu-list button { display: block; width: 100%; min-height: 52px; margin-top: 8px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); font-weight: 700; text-align: left; padding: 0 14px; }
+  .toast { position: fixed; left: 14px; right: 14px; bottom: calc(90px + env(safe-area-inset-bottom)); z-index: 9; padding: 14px; border-radius: 12px; background: var(--red); color: #fff; font-weight: 700; }
+  .empty { padding: 24px 14px; color: var(--muted); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="what"><div class="title" id="title">FONUR live</div><div class="sum" id="sum"></div></div>
+  <span class="pill" id="sync" role="status">Saved</span>
+  <button class="menu" id="menuBtn" type="button" aria-label="Menu">⋯</button>
+</header>
+<nav class="tabs" id="tabs" hidden></nav>
+<div id="notes"></div>
+<main id="view"><p class="empty">Loading…</p></main>
+<footer class="recent" id="recent" aria-label="Your recent changes"></footer>
+<dialog id="dlg"></dialog>
+<div class="toast" id="toast" role="alert" hidden></div>
+<p class="sr" id="live" aria-live="polite"></p>
+<script type="application/json" id="practice">{"id":"campaign:tackleathon-demo","kind":"board","title":"Tackleathon demo","page":"/campaigns/tackleathon-demo/","opens":"2026-10-07T04:00:00.000Z","closes":"2027-07-01T03:59:00.000Z","entries":[{"key":"alex-brennan","label":"Alex Brennan","number":1},{"key":"sam-okafor","label":"Sam Okafor","number":2},{"key":"chris-doyle","label":"Chris Doyle","number":3},{"key":"jordan-chen","label":"Jordan Chen","number":4},{"key":"riley-esposito","label":"Riley Esposito","number":6},{"key":"morgan-fitzgerald","label":"Morgan Fitzgerald","number":7},{"key":"taylor-grant","label":"Taylor Grant","number":8},{"key":"casey-hughes","label":"Casey Hughes","number":9},{"key":"jamie-alvarez","label":"Jamie Alvarez","number":10},{"key":"drew-kowalski","label":"Drew Kowalski","number":15}],"actions":[{"label":"+1","delta":1},{"label":"−1","delta":-1}],"allowAdd":true,"statuses":[],"unit":"tackles"}</script>
+<script src="/live/sideline.js" defer></script>
+</body>
+</html>
