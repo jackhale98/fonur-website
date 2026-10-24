@@ -1,0 +1,1 @@
+import{t as e}from"./campaigns.CbBA3xHR.js";for(let t of document.querySelectorAll(`[data-lb-countdown]`)){let n=Date.parse(t.dataset.to),r=t.querySelector(`[data-lb-left]`),i=t.parentElement.querySelector(`[data-lb-body]`),a=()=>{let a=n-Date.now();if(a<=0){t.hidden=!0,i.hidden=!1,clearInterval(o);return}r.textContent=e(a)},o=setInterval(a,1e3);a()}

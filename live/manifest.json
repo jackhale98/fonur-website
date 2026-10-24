@@ -1,0 +1,240 @@
+{
+ "generated": "2026-10-24T21:57:42.822Z",
+ "trackers": [
+  {
+   "id": "campaign:tackleathon-demo",
+   "kind": "board",
+   "title": "Tackleathon demo",
+   "page": "/campaigns/tackleathon-demo/",
+   "opens": "2026-10-07T04:00:00.000Z",
+   "closes": "2026-10-24T03:59:00.000Z",
+   "entries": [
+    {
+     "key": "alex-brennan",
+     "label": "Alex Brennan",
+     "number": 1
+    },
+    {
+     "key": "sam-okafor",
+     "label": "Sam Okafor",
+     "number": 2
+    },
+    {
+     "key": "chris-doyle",
+     "label": "Chris Doyle",
+     "number": 3
+    },
+    {
+     "key": "jordan-chen",
+     "label": "Jordan Chen",
+     "number": 4
+    },
+    {
+     "key": "riley-esposito",
+     "label": "Riley Esposito",
+     "number": 6
+    },
+    {
+     "key": "morgan-fitzgerald",
+     "label": "Morgan Fitzgerald",
+     "number": 7
+    },
+    {
+     "key": "taylor-grant",
+     "label": "Taylor Grant",
+     "number": 8
+    },
+    {
+     "key": "casey-hughes",
+     "label": "Casey Hughes",
+     "number": 9
+    },
+    {
+     "key": "jamie-alvarez",
+     "label": "Jamie Alvarez",
+     "number": 10
+    },
+    {
+     "key": "drew-kowalski",
+     "label": "Drew Kowalski",
+     "number": 15
+    }
+   ],
+   "actions": [
+    {
+     "label": "+1",
+     "delta": 1
+    },
+    {
+     "label": "−1",
+     "delta": -1
+    }
+   ],
+   "allowAdd": true,
+   "statuses": [],
+   "unit": "tackles"
+  },
+  {
+   "id": "campaign:tackleathon-2026",
+   "kind": "board",
+   "title": "Alumni Weekend Tackleathon",
+   "page": "/campaigns/tackleathon-2026/",
+   "opens": "2026-10-21T03:00:00.000Z",
+   "closes": "2026-10-24T22:00:00.000Z",
+   "publicFrom": "2026-10-24T18:15:00.000Z",
+   "entries": [
+    {
+     "key": "jake-pobjoy",
+     "label": "Jake Pobjoy",
+     "number": 1,
+     "position": "Prop"
+    },
+    {
+     "key": "nate-hirsch",
+     "label": "Nate Hirsch",
+     "number": 2,
+     "position": "Hooker"
+    },
+    {
+     "key": "mike-altobelli",
+     "label": "Mike Altobelli",
+     "number": 3,
+     "position": "Prop"
+    },
+    {
+     "key": "charlie-beney",
+     "label": "Charlie Beney",
+     "number": 4,
+     "position": "Second Row"
+    },
+    {
+     "key": "ian-mctaggart",
+     "label": "Ian McTaggart",
+     "number": 5,
+     "position": "Second Row"
+    },
+    {
+     "key": "dylan-velardo",
+     "label": "Dylan Velardo",
+     "number": 6,
+     "position": "Flanker"
+    },
+    {
+     "key": "bryce-hubbard",
+     "label": "Bryce Hubbard",
+     "number": 7,
+     "position": "Flanker"
+    },
+    {
+     "key": "aaron-feldman",
+     "label": "Aaron Feldman",
+     "number": 8,
+     "position": "8 Man"
+    },
+    {
+     "key": "alex-brescio",
+     "label": "Alex Brescio",
+     "number": 9,
+     "position": "Scrum Half"
+    },
+    {
+     "key": "harry-johnston",
+     "label": "Harry Johnston",
+     "number": 10,
+     "position": "Fly Half"
+    },
+    {
+     "key": "ryan-esfahanian",
+     "label": "Ryan Esfahanian",
+     "number": 11,
+     "position": "Winger"
+    },
+    {
+     "key": "lucas-van-der-kam",
+     "label": "Lucas Van Der Kam",
+     "number": 12,
+     "position": "Inside Center"
+    },
+    {
+     "key": "jack-maloney",
+     "label": "Jack Maloney",
+     "number": 13,
+     "position": "Outside Center"
+    },
+    {
+     "key": "chris-coppola",
+     "label": "Chris Coppola",
+     "number": 14,
+     "position": "Winger"
+    },
+    {
+     "key": "benja-lobo",
+     "label": "Benja Lobo",
+     "number": 15,
+     "position": "Fullback"
+    },
+    {
+     "key": "zach-ryan",
+     "label": "Zach Ryan",
+     "number": 16,
+     "position": "Reserve Forward"
+    },
+    {
+     "key": "john-zion",
+     "label": "John Zion",
+     "number": 17,
+     "position": "Reserve Forward"
+    },
+    {
+     "key": "tucker-andrews",
+     "label": "Tucker Andrews",
+     "number": 18,
+     "position": "Reserve Forward"
+    },
+    {
+     "key": "andrew-rowe",
+     "label": "Andrew Rowe",
+     "number": 19,
+     "position": "Reserve Forward"
+    },
+    {
+     "key": "will-anstey",
+     "label": "Will Anstey",
+     "number": 20,
+     "position": "Reserve Forward"
+    },
+    {
+     "key": "tyler-vagnucci",
+     "label": "Tyler Vagnucci",
+     "number": 21,
+     "position": "Reserve Back"
+    },
+    {
+     "key": "marco-ortiz",
+     "label": "Marco Ortiz",
+     "number": 22,
+     "position": "Reserve Back"
+    },
+    {
+     "key": "dwyer-lonergan",
+     "label": "Dwyer Lonergan",
+     "number": 23,
+     "position": "Reserve Back"
+    }
+   ],
+   "actions": [
+    {
+     "label": "+1",
+     "delta": 1
+    },
+    {
+     "label": "−1",
+     "delta": -1
+    }
+   ],
+   "allowAdd": true,
+   "statuses": [],
+   "unit": "tackles"
+  }
+ ]
+}
