@@ -1,0 +1,83 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FONUR//Club site//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FONUR alumni events
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:event-2026-10-24-alumni-weekend@fonur.org
+DTSTAMP:20261031T120821Z
+SUMMARY:Alumni Weekend
+DTSTART:20261024T184500Z
+DTEND:20261024T214500Z
+LOCATION:Carter Field\, Boston\, MA
+DESCRIPTION:The Maddogs host Babson at Carter Field at 2:45 PM\, then every
+ one heads to Slade's Bar & Grill for the drink up.\n\nhttps://fonur.org/ev
+ ents/2026-10-24-alumni-weekend/
+URL:https://fonur.org/events/2026-10-24-alumni-weekend/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:campaign-tackleathon-2026@fonur.org
+DTSTAMP:20261031T120821Z
+SUMMARY:FONUR: Alumni Weekend Tackleathon
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261025
+DESCRIPTION:Back the Maddogs against Babson on Alumni Weekend: sponsor a pl
+ ayer's tackles\, the team's tries or a win.\n\nPledge now: https://forms.c
+ loud.microsoft/Pages/ResponsePage.aspx?id=gcLuqKOqrk2sm5o5i5IV54MGCq1Ue7BG
+ g6eJlqQ-avVUNFVKUTg5R0lYQTlRVzhVNlNFQVg4VUNQUS4u\n\nDetails: https://fonur
+ .org/campaigns/tackleathon-2026/
+URL:https://fonur.org/campaigns/tackleathon-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:campaign-tackleathon-2026-0@fonur.org
+DTSTAMP:20261031T120821Z
+SUMMARY:Tackleathon: Maddogs vs Babson
+DTSTART:20261024T184500Z
+DTEND:20261024T203000Z
+DESCRIPTION:Every tackle and every try counts. Come to Carter Field and che
+ er them on\, or follow the live tackle leaderboard on this page. Pledges s
+ tay open until after the final whistle.\n\nPledge now: https://forms.cloud
+ .microsoft/Pages/ResponsePage.aspx?id=gcLuqKOqrk2sm5o5i5IV54MGCq1Ue7BGg6eJ
+ lqQ-avVUNFVKUTg5R0lYQTlRVzhVNlNFQVg4VUNQUS4u\n\nDetails: https://fonur.org
+ /campaigns/tackleathon-2026/
+URL:https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=gcLuqKOqrk2sm5
+ o5i5IV54MGCq1Ue7BGg6eJlqQ-avVUNFVKUTg5R0lYQTlRVzhVNlNFQVg4VUNQUS4u
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Maddogs vs Babson starts in 15 minutes
+TRIGGER:-PT15M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Maddogs vs Babson is live
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:campaign-tackleathon-2026-1@fonur.org
+DTSTAMP:20261031T120821Z
+SUMMARY:Tackleathon: Results announced
+DTSTART:20261024T203000Z
+DTEND:20261024T213000Z
+DESCRIPTION:Right after the match\, the final tackles per player\, the team
+ 's tries and the result go up here.\n\nPledge now: https://forms.cloud.mic
+ rosoft/Pages/ResponsePage.aspx?id=gcLuqKOqrk2sm5o5i5IV54MGCq1Ue7BGg6eJlqQ-
+ avVUNFVKUTg5R0lYQTlRVzhVNlNFQVg4VUNQUS4u\n\nDetails: https://fonur.org/cam
+ paigns/tackleathon-2026/
+URL:https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=gcLuqKOqrk2sm5
+ o5i5IV54MGCq1Ue7BGg6eJlqQ-avVUNFVKUTg5R0lYQTlRVzhVNlNFQVg4VUNQUS4u
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Results announced starts in 15 minutes
+TRIGGER:-PT15M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Results announced is live
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
