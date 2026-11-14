@@ -1,0 +1,64 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FONUR//Club site//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Maddogs Rugby Tour to Rome
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:event-2027-03-09-rome-tour@fonur.org
+DTSTAMP:20261114T104715Z
+SUMMARY:Maddogs Rugby Tour to Rome
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270310
+LOCATION:Rome\, Italy
+DESCRIPTION:Tour Rome with the Maddogs\, March 9–14\, 2027: a match again
+ st an Italian club\, and Italy v Wales on the final weekend of the Six Nat
+ ions.\n\nhttps://fonur.org/events/2027-03-09-rome-tour/
+URL:https://fonur.org/events/2027-03-09-rome-tour/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:event-2027-03-09-rome-tour-0@fonur.org
+DTSTAMP:20261114T104715Z
+SUMMARY:Maddogs Rugby Tour to Rome: Depart Boston Logan
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270310
+LOCATION:Rome\, Italy
+DESCRIPTION:Overnight flight to Rome.\n\nDetails: https://fonur.org/events/
+ 2027-03-09-rome-tour/
+URL:https://fonur.org/events/2027-03-09-rome-tour/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-2027-03-09-rome-tour-1@fonur.org
+DTSTAMP:20261114T104715Z
+SUMMARY:Maddogs Rugby Tour to Rome: Arrive in Rome
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+LOCATION:Rome\, Italy
+DESCRIPTION:Private bus to the hotel. Four nights in a 3-star hotel.\n\nDet
+ ails: https://fonur.org/events/2027-03-09-rome-tour/
+URL:https://fonur.org/events/2027-03-09-rome-tour/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-2027-03-09-rome-tour-2@fonur.org
+DTSTAMP:20261114T104715Z
+SUMMARY:Maddogs Rugby Tour to Rome: Italy v Wales\, Six Nations
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+LOCATION:Rome\, Italy
+DESCRIPTION:The final weekend of the Six Nations.\n\nDetails: https://fonur
+ .org/events/2027-03-09-rome-tour/
+URL:https://fonur.org/events/2027-03-09-rome-tour/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-2027-03-09-rome-tour-3@fonur.org
+DTSTAMP:20261114T104715Z
+SUMMARY:Maddogs Rugby Tour to Rome: Fly home
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+LOCATION:Rome\, Italy
+DESCRIPTION:Details: https://fonur.org/events/2027-03-09-rome-tour/
+URL:https://fonur.org/events/2027-03-09-rome-tour/
+END:VEVENT
+END:VCALENDAR
